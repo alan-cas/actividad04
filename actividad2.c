@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "personaje.h"
 void leer_cadena(char cadena[20],int n){
 	for(int i=0;i<n;i++){
 		printf("%s\n",cadena);
@@ -44,16 +45,16 @@ int main() {
     			leer_cadena(cadena,n);
     			break;
     		case '3':
+    			capturar_personaje();
     			break;
     		case '4':
+    			mostrar_personajes();
     			break;
     		default :
+    			printf("[%c] no es una opcion, intente de nuevo\n",opc);
     			break;
 		}
 	}while (opc!='0');
 	
-	
-	
-
     return 0;
 }
